@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.3.0'
+    id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'org.techspark'
+version = '1.0.0-alpha'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.techspark:techspark-bom:1.0.0'
+    }
+}
+
+
+dependencies {
+
+    //Spring Boot Libraries
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    //OpenApi for Swagger
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0'
+
+
+}
